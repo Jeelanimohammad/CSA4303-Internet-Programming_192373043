@@ -1,0 +1,1912 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mohammad Jeelani | Portfolio</title>
+
+<style>
+
+/* =========================
+   BASIC RESET
+========================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Poppins","Segoe UI",sans-serif;
+scroll-behavior:smooth;
+}
+
+
+body{
+
+background:#050816;
+color:white;
+overflow-x:hidden;
+
+}
+
+
+/* =========================
+   ANIMATED BACKGROUND
+========================= */
+
+body::before{
+
+content:"";
+position:fixed;
+width:600px;
+height:600px;
+background:#38bdf8;
+border-radius:50%;
+filter:blur(180px);
+opacity:.25;
+top:-200px;
+left:-200px;
+animation:move1 12s infinite alternate;
+z-index:-2;
+
+}
+
+
+body::after{
+
+content:"";
+position:fixed;
+width:600px;
+height:600px;
+background:#8b5cf6;
+border-radius:50%;
+filter:blur(180px);
+opacity:.25;
+bottom:-200px;
+right:-200px;
+animation:move2 15s infinite alternate;
+z-index:-2;
+
+}
+
+
+
+@keyframes move1{
+
+from{
+transform:translate(0,0);
+}
+
+to{
+transform:translate(300px,200px);
+}
+
+}
+
+
+
+@keyframes move2{
+
+from{
+transform:translate(0,0);
+}
+
+to{
+transform:translate(-250px,-200px);
+}
+
+}
+
+
+/* =========================
+ PARTICLES
+========================= */
+
+
+.particle{
+
+position:fixed;
+width:8px;
+height:8px;
+background:#22d3ee;
+border-radius:50%;
+opacity:.5;
+animation:float 8s infinite;
+
+}
+
+
+
+@keyframes float{
+
+0%{
+
+transform:translateY(100vh);
+
+}
+
+
+100%{
+
+transform:translateY(-100vh);
+
+}
+
+}
+
+
+
+/* =========================
+ NAVBAR
+========================= */
+
+
+nav{
+
+position:fixed;
+top:0;
+width:100%;
+padding:20px 8%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(15px);
+
+border-bottom:1px solid rgba(255,255,255,.2);
+
+z-index:1000;
+
+}
+
+
+
+.logo{
+
+font-size:30px;
+font-weight:bold;
+
+color:#38bdf8;
+
+}
+
+
+
+nav ul{
+
+display:flex;
+list-style:none;
+
+}
+
+
+
+nav ul li{
+
+margin-left:25px;
+
+}
+
+
+
+nav ul li a{
+
+text-decoration:none;
+color:white;
+font-weight:500;
+
+transition:.4s;
+
+}
+
+
+
+nav ul li a:hover{
+
+color:#22d3ee;
+
+}
+
+
+
+/* =========================
+ HERO
+========================= */
+
+
+.hero{
+
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+}
+
+
+
+.hero-box{
+
+background:rgba(255,255,255,.08);
+
+padding:50px;
+
+border-radius:30px;
+
+border:1px solid rgba(255,255,255,.2);
+
+backdrop-filter:blur(20px);
+
+box-shadow:
+
+0 0 40px rgba(56,189,248,.2);
+
+
+animation:appear 2s;
+
+}
+
+
+
+@keyframes appear{
+
+from{
+
+opacity:0;
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+
+
+.hero h1{
+
+font-size:65px;
+
+background:linear-gradient(
+90deg,
+#38bdf8,
+#8b5cf6
+);
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+}
+
+
+
+.hero h2{
+
+font-size:30px;
+
+margin:20px;
+
+}
+
+
+
+.hero p{
+
+font-size:18px;
+
+max-width:700px;
+
+line-height:30px;
+
+}
+
+
+
+.btn{
+
+display:inline-block;
+
+margin-top:30px;
+
+padding:15px 40px;
+
+border-radius:40px;
+
+background:#38bdf8;
+
+color:#020617;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.4s;
+
+}
+
+
+
+.btn:hover{
+
+transform:scale(1.1);
+
+box-shadow:
+
+0 0 30px #38bdf8;
+
+}
+
+
+/* =========================
+ SECTION COMMON
+========================= */
+
+
+section{
+
+padding:100px 8%;
+
+}
+
+
+
+.title{
+
+text-align:center;
+
+font-size:45px;
+
+margin-bottom:50px;
+
+color:#38bdf8;
+
+}
+
+
+
+/* =========================
+ GLASS CARD
+========================= */
+
+
+.card{
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,255,255,.2);
+
+backdrop-filter:blur(15px);
+
+border-radius:25px;
+
+padding:30px;
+
+transition:.5s;
+
+}
+
+
+
+.card:hover{
+
+transform:
+
+perspective(800px)
+rotateX(8deg)
+rotateY(-8deg)
+translateY(-10px);
+
+
+box-shadow:
+
+0 20px 50px rgba(56,189,248,.3);
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="particle" style="left:10%;animation-delay:1s"></div>
+<div class="particle" style="left:30%;animation-delay:3s"></div>
+<div class="particle" style="left:60%;animation-delay:5s"></div>
+<div class="particle" style="left:80%;animation-delay:2s"></div>
+
+
+
+<nav>
+
+<div class="logo">
+MJ
+</div>
+
+
+<ul>
+
+<li><a href="#home">Home</a></li>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#education">Education</a></li>
+
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+
+</ul>
+
+</nav>
+
+
+
+<section class="hero" id="home">
+
+
+<div class="hero-box">
+
+
+<h1>
+Mohammad Jeelani
+</h1>
+
+
+<h2>
+Future Software Engineer
+</h2>
+
+
+<p>
+
+Computer Science Engineering student specializing in Data Science.
+Passionate about developing innovative applications,
+web technologies and solving real-world problems using technology.
+
+</p>
+
+
+<a class="btn" href="#about">
+Explore My Journey
+</a>
+
+
+</div>
+
+
+</section>
+<!-- =========================
+        ABOUT SECTION
+========================= -->
+
+
+<section id="about">
+
+
+<h1 class="title">
+About Me
+</h1>
+
+
+<div class="card">
+
+
+<p style="font-size:20px;line-height:35px;">
+
+
+I am <b>Mohammad Jeelani</b>, a Computer Science Engineering student
+specializing in Data Science. I am passionate about software development,
+web technologies, data analytics, and building innovative solutions.
+
+<br><br>
+
+I enjoy learning new technologies, solving programming problems,
+and creating applications that provide meaningful solutions.
+My goal is to become a professional Software Engineer by continuously
+improving my technical and problem-solving skills.
+
+<br><br>
+
+I believe technology is not only about writing code,
+but also about creating useful experiences that can make people's lives better.
+
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<!-- =========================
+        EDUCATION SECTION
+========================= -->
+
+
+<section id="education">
+
+
+<h1 class="title">
+Education Journey
+</h1>
+
+
+
+<div class="card">
+
+
+<h2 style="color:#38bdf8;">
+🎓 Bachelor of Technology
+</h2>
+
+
+<h3>
+Computer Science Engineering
+</h3>
+
+
+<p>
+
+Specialization:
+<b>Data Science</b>
+
+<br><br>
+
+Currently pursuing B.Tech in Computer Science Engineering,
+developing knowledge in programming, databases,
+software development and artificial intelligence.
+
+</p>
+
+
+</div>
+
+
+<br><br>
+
+
+<div class="card">
+
+
+<h2 style="color:#38bdf8;">
+📚 Academic Foundation
+</h2>
+
+
+<p>
+
+Learned programming fundamentals,
+object-oriented programming,
+data structures, database management,
+web technologies and data analysis.
+
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<!-- =========================
+        SKILLS SECTION
+========================= -->
+
+
+<section id="skills">
+
+
+<h1 class="title">
+Technical Skills
+</h1>
+
+
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+">
+
+
+<div class="card">
+
+<h2>
+💻 Programming
+</h2>
+
+<p>
+
+Java<br>
+Python<br>
+C Programming<br>
+C++
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+<h2>
+🌐 Web Technologies
+</h2>
+
+<p>
+
+HTML<br>
+CSS<br>
+JavaScript<br>
+Responsive Web Design
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+<h2>
+📊 Data Science
+</h2>
+
+
+<p>
+
+Python for Data Analysis<br>
+Power BI<br>
+Data Visualization<br>
+SQL
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+<h2>
+🛠 Tools
+</h2>
+
+
+<p>
+
+GitHub<br>
+VS Code<br>
+Xcode<br>
+Figma
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- =========================
+        SKILL LEVELS
+========================= -->
+
+
+<section>
+
+
+<h1 class="title">
+
+Skill Progress
+
+</h1>
+
+
+
+<div class="card">
+
+
+<h3>
+HTML & CSS
+</h3>
+
+
+<div class="bar">
+
+<div class="fill" style="width:95%">
+
+</div>
+
+</div>
+
+
+<br>
+
+
+<h3>
+Python
+</h3>
+
+
+<div class="bar">
+
+<div class="fill" style="width:88%">
+
+</div>
+
+</div>
+
+
+<br>
+
+
+<h3>
+Java
+</h3>
+
+
+<div class="bar">
+
+<div class="fill" style="width:85%">
+
+</div>
+
+</div>
+
+
+
+<br>
+
+
+<h3>
+SQL
+</h3>
+
+
+<div class="bar">
+
+<div class="fill" style="width:82%">
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<style>
+
+
+.bar{
+
+height:18px;
+
+background:#1e293b;
+
+border-radius:20px;
+
+overflow:hidden;
+
+margin-top:10px;
+
+}
+
+
+.fill{
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+#38bdf8,
+#8b5cf6
+);
+
+
+border-radius:20px;
+
+animation:loading 2s;
+
+
+}
+
+
+
+@keyframes loading{
+
+
+from{
+
+width:0;
+
+}
+
+
+}
+
+
+</style>
+<!-- =========================
+        PROJECTS SECTION
+========================= -->
+
+
+<section id="projects">
+
+
+<h1 class="title">
+My Projects
+</h1>
+
+
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:35px;
+">
+
+
+
+<!-- PROJECT 1 -->
+
+<div class="card project-card"
+onclick="openProject(
+'Retail Sales Dashboard',
+'An interactive Power BI dashboard developed to analyze sales performance, KPIs, regional trends and business insights using data visualization.'
+)">
+
+
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+style="
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:20px;
+">
+
+
+<h2>
+📊 Retail Sales Dashboard
+</h2>
+
+
+<p>
+
+Power BI dashboard with interactive reports,
+charts and business analytics.
+
+</p>
+
+
+<button class="btn">
+View Details
+</button>
+
+
+</div>
+
+
+
+
+
+<!-- PROJECT 2 -->
+
+
+<div class="card project-card"
+onclick="openProject(
+'Focus Flow',
+'Focus Flow is a productivity application designed to improve concentration, task management and time planning using modern UI concepts.'
+)">
+
+
+
+<img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643"
+style="
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:20px;
+">
+
+
+<h2>
+⏱ Focus Flow
+</h2>
+
+
+<p>
+
+A productivity application for better
+focus and daily planning.
+
+</p>
+
+
+<button class="btn">
+View Details
+</button>
+
+
+</div>
+
+
+
+
+
+
+<!-- PROJECT 3 -->
+
+
+<div class="card project-card"
+onclick="openProject(
+'Autism Screening Application',
+'An iOS based healthcare application for early autism screening and patient management using SwiftUI, PHP APIs and MySQL database.'
+)">
+
+
+
+<img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef"
+style="
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:20px;
+">
+
+
+<h2>
+💙 Autism Screening App
+</h2>
+
+
+<p>
+
+iOS healthcare application with
+modern user interface.
+
+</p>
+
+
+<button class="btn">
+View Details
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- =========================
+        POPUP WINDOW
+========================= -->
+
+
+<div id="popup">
+
+
+<div class="popup-box">
+
+
+<h1 id="popup-title">
+
+Project
+
+</h1>
+
+
+<p id="popup-text">
+
+Description
+
+</p>
+
+
+
+<button onclick="closeProject()" class="btn">
+
+Close
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<style>
+
+
+.project-card{
+
+cursor:pointer;
+
+}
+
+
+
+.project-card img{
+
+transition:.5s;
+
+}
+
+
+
+.project-card:hover img{
+
+transform:scale(1.08);
+
+}
+
+
+
+#popup{
+
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+
+background:rgba(0,0,0,.7);
+
+
+display:none;
+
+align-items:center;
+
+justify-content:center;
+
+
+z-index:2000;
+
+
+}
+
+
+
+.popup-box{
+
+
+width:500px;
+
+max-width:90%;
+
+
+padding:40px;
+
+
+border-radius:30px;
+
+
+background:
+
+rgba(255,255,255,.12);
+
+
+backdrop-filter:blur(20px);
+
+
+border:1px solid rgba(255,255,255,.3);
+
+
+animation:popup .5s;
+
+
+text-align:center;
+
+
+}
+
+
+
+@keyframes popup{
+
+
+from{
+
+transform:translateY(100px) scale(.5);
+
+opacity:0;
+
+}
+
+
+to{
+
+transform:translateY(0) scale(1);
+
+opacity:1;
+
+}
+
+
+}
+
+
+
+</style>
+
+
+
+
+
+
+<script>
+
+
+function openProject(title,text){
+
+
+document.getElementById("popup-title").innerHTML=title;
+
+
+document.getElementById("popup-text").innerHTML=text;
+
+
+document.getElementById("popup").style.display="flex";
+
+
+}
+
+
+
+function closeProject(){
+
+
+document.getElementById("popup").style.display="none";
+
+
+}
+
+
+
+</script>
+
+
+
+
+
+
+<!-- =========================
+        ACHIEVEMENTS
+========================= -->
+
+
+<section>
+
+
+<h1 class="title">
+
+Achievements
+
+</h1>
+
+
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+">
+
+
+
+<div class="card">
+
+<h2>
+🚀
+</h2>
+
+<h3>
+Projects Completed
+</h3>
+
+
+<p>
+
+Built multiple academic and personal projects
+using modern technologies.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+<h2>
+💡
+</h2>
+
+<h3>
+Continuous Learning
+</h3>
+
+
+<p>
+
+Always improving programming,
+development and problem-solving skills.
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="card">
+
+<h2>
+🏆
+</h2>
+
+<h3>
+Technical Growth
+</h3>
+
+
+<p>
+
+Exploring software engineering,
+data science and application development.
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- =========================
+        HOBBIES
+========================= -->
+
+
+<section>
+
+
+<h1 class="title">
+
+My Hobbies
+
+</h1>
+
+
+
+<div class="card">
+
+
+<p style="font-size:20px;line-height:35px;">
+
+
+🎮 Exploring new technologies
+
+<br>
+
+📚 Learning programming concepts
+
+<br>
+
+🎧 Listening to music
+
+<br>
+
+🌐 Exploring innovative applications
+
+<br>
+
+💻 Building creative projects
+
+<br>
+
+✈️ Exploring new ideas and experiences
+
+
+</p>
+
+
+</div>
+
+
+</section>
+<!-- =========================
+        CONTACT SECTION
+========================= -->
+
+
+<section id="contact">
+
+
+<h1 class="title">
+Contact Me
+</h1>
+
+
+
+<div class="card">
+
+
+<p style="
+font-size:22px;
+line-height:40px;
+text-align:center;
+">
+
+
+📧 Email:
+
+<br>
+
+mohammadjeelani@example.com
+
+
+<br><br>
+
+
+📱 Phone:
+
+<br>
+
++91 XXXXX XXXXX
+
+
+<br><br>
+
+
+📍 Location:
+
+<br>
+
+India
+
+
+</p>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+<!-- =========================
+        QUOTE SECTION
+========================= -->
+
+
+<section>
+
+
+<div class="card" style="text-align:center;">
+
+
+<h1 style="
+color:#38bdf8;
+font-size:40px;
+">
+
+
+"Code Today,
+Create Tomorrow"
+
+
+</h1>
+
+
+<br>
+
+
+<p style="
+font-size:20px;
+line-height:35px;
+">
+
+
+Technology keeps evolving,
+and my passion is to continuously learn,
+build and create meaningful solutions.
+
+
+</p>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- =========================
+        FOOTER
+========================= -->
+
+
+<footer style="
+
+padding:40px;
+
+text-align:center;
+
+background:#020617;
+
+border-top:1px solid rgba(255,255,255,.2);
+
+">
+
+
+<h2>
+
+Mohammad Jeelani
+
+</h2>
+
+
+<p>
+
+Future Software Engineer
+
+</p>
+
+
+<p>
+
+© 2026 All Rights Reserved
+
+</p>
+
+
+</footer>
+
+
+
+
+
+
+
+<!-- =========================
+ CUSTOM CURSOR
+========================= -->
+
+
+<div id="cursor"></div>
+
+
+
+
+
+
+<style>
+
+
+/* CURSOR */
+
+
+#cursor{
+
+
+position:fixed;
+
+width:25px;
+
+height:25px;
+
+background:#38bdf8;
+
+border-radius:50%;
+
+pointer-events:none;
+
+z-index:5000;
+
+
+box-shadow:
+
+0 0 30px #38bdf8;
+
+
+transform:translate(-50%,-50%);
+
+
+}
+
+
+
+</style>
+
+
+
+
+
+
+<!-- =========================
+ BACK TO TOP BUTTON
+========================= -->
+
+
+<button id="topBtn"
+onclick="topFunction()">
+
+
+↑
+
+
+</button>
+
+
+
+
+<style>
+
+
+#topBtn{
+
+
+position:fixed;
+
+
+right:30px;
+
+bottom:30px;
+
+
+width:50px;
+
+height:50px;
+
+
+border-radius:50%;
+
+
+border:none;
+
+
+background:#38bdf8;
+
+
+font-size:25px;
+
+
+cursor:pointer;
+
+
+display:none;
+
+
+z-index:1000;
+
+
+}
+
+
+
+#topBtn:hover{
+
+
+transform:scale(1.1);
+
+
+box-shadow:
+
+0 0 30px #38bdf8;
+
+
+}
+
+
+
+</style>
+
+
+
+
+
+
+<!-- =========================
+ RIPPLE EFFECT
+========================= -->
+
+
+
+<style>
+
+
+.ripple{
+
+
+position:absolute;
+
+
+border-radius:50%;
+
+
+background:#38bdf8;
+
+
+transform:scale(0);
+
+
+animation:ripple .6s;
+
+
+opacity:.5;
+
+
+}
+
+
+
+@keyframes ripple{
+
+
+to{
+
+
+transform:scale(5);
+
+opacity:0;
+
+
+}
+
+
+
+}
+
+
+
+</style>
+
+
+
+
+
+
+
+
+<script>
+
+
+/* =====================
+CUSTOM CURSOR
+===================== */
+
+
+let cursor=document.getElementById("cursor");
+
+
+document.addEventListener(
+"mousemove",
+function(e){
+
+
+cursor.style.left=e.clientX+"px";
+
+
+cursor.style.top=e.clientY+"px";
+
+
+}
+
+);
+
+
+
+
+
+
+
+/* =====================
+CLICK SPLASH EFFECT
+===================== */
+
+
+document.addEventListener(
+"click",
+function(e){
+
+
+let circle=document.createElement("span");
+
+
+circle.className="ripple";
+
+
+circle.style.left=e.pageX+"px";
+
+
+circle.style.top=e.pageY+"px";
+
+
+circle.style.width="40px";
+
+
+circle.style.height="40px";
+
+
+document.body.appendChild(circle);
+
+
+
+setTimeout(()=>{
+
+
+circle.remove();
+
+
+},600);
+
+
+
+}
+
+);
+
+
+
+
+
+
+
+
+/* =====================
+BACK TO TOP
+===================== */
+
+
+let topButton=document.getElementById("topBtn");
+
+
+
+window.onscroll=function(){
+
+
+if(
+document.documentElement.scrollTop>300
+){
+
+
+topButton.style.display="block";
+
+
+}
+
+else{
+
+
+topButton.style.display="none";
+
+
+}
+
+
+};
+
+
+
+
+
+function topFunction(){
+
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+
+}
+
+
+
+</script>
+
+
+
+
+
+</body>
+
+</html>
